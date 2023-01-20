@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head lang="eng">
+        <meta charset="utf-8"> 
+        <title>introduction to table</title>
+        <style>
+            div.container{display: flex; 
+                    justify-content:space-between;
+                    flex-direction: row;
+                    align-items:center;
+                    align-content: center
+                /*
+                背景申明：
+                background-color:
+                background-image: url()
+                background-size: 
+                background-repeat:
+                background-attachment:
+                background-position
+                */
+            }
+            div.container .one{
+                width: 50%;
+            }
+            div.container .two{
+                width: 50%;
+                display: flex;
+                align-content:stretch
+            }
+            table.one{
+                text-align: center;
+            }
+            tr.one{
+                background-color: azure; opacity: 0.5
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <div>
+            
+            <h3 align="center">今日关注上升榜</h3>
+
+        </div>
+
+        <div class="container">  <!--this div is a flexbox-->
+        
+            <div class="one">
+                <img src="https://img1.baidu.com/it/u=2738228210,206704073&fm=253&fmt=auto&app=138&f=PNG?w=500&h=324">
+            </div>
+            <div class="two">
+                <table class="one">
+                    <tr class="one">
+                        <th></th>
+                        <th>关键词</th>
+                        <th>关注指数</th>
+                        <th>升降位数</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>运动套装女</td>
+                        <td>40589</td>
+                        <td>128</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>欧洲杯</td>
+                        <td>26448</td>
+                        <td>73</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>高跟鞋</td>
+                        <td>23981</td>
+                        <td>50</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        
+    </body>
+</html>

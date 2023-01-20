@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head lang="eng">
+        <meta charset="utf-8"> 
+        <title>introduction to table</title>
+        <style>
+            /*tag选择器*/
+            ul{color:red; 
+               list-style: square;
+            }
+
+            /*属性选择器*/
+            input[type="password"]{height: 100px;}  /*该styling 作用于 所有 属性type的值为text 的input标签*/
+            p[class~="piupiupiu"]{color:cyan}     /*表示 class名称中 包含 piupiupiu 的 所有 <p>*/
+            p[class^="p"]{color:brown}            /*表示 class名称中 以p开头 的 所有 <p>*/
+            a[href*="jd"]{color:khaki}            /*表示 href中 包含jd 的 所有 <a>*/
+
+            /*属性也是可以叠加的*/
+            p[class="p1"][height="100px"]{letter-spacing:5px; color:chartreuse}
+
+            /*class 选择器*/
+            .p1 {color:red}
+            .pMore {font-size: 30px}
+
+            /* tag:event 选择器*/
+            a:link{color:blue}
+            a:visited{color:coral}
+            a:hover{color: hotpink}
+            a:active{color:turquoise}
+
+            ul.one li{display:inline-block;
+                      list-style: none;
+                      height: 50px;
+                      width: 100px;
+                      color:green;
+                      text-align: center; line-height: 50px;   /*!!!!!让 text 上下对其，使用line-height!!!*/
+            }
+            ul.one li:hover{background-color:coral;
+                            color:aliceblue
+            }
+            ul.one li:active{color:gold}
+
+            div:not(#five){color:blueviolet}
+
+            /*nth child 选择器*/
+            ul.shit li:first-child{color:greenyellow}    /*作为其parent的first-child的<li>*/
+            ul.shit li:nth-child(3){color:skyblue}       /*作为其parent的thirdx-child的<li>*/
+
+            li:only-child{color:magenta; list-style: decimal;}  /*作为only-child的<li>*/
+
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <h3>tag选择器</h3>
+            <ul color="yellow">     <!--这里的color属性不工作，跟上面的style setting无关！-->
+                <li>one</li>
+                <li>two</li>
+                <li>three</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div>
+            <h3>属性选择器</h3>
+            <form>
+                <input type="text">
+                <input type="password">
+                <input type="radio">
+                <input type="submit">
+            </form>
+
+            <form>
+                <input type="text">
+                <input type="password">
+            </form>
+
+            <p class="p1">这一个paragraph</p>
+            <p class="p1 lalala piupiupiu">这一个paragraph</p>  <!--color = cyan-->
+            <p class="p2 piupiupiu">这一个paragraph</p>         <!--color = cyan-->
+
+            <a href="http://www.baidu.com" target="_blank">百度</a>
+            <a href="http://www.jd.com" target="_blank">京东</a>
+            <a href="http://www.taobao.com" target="_blank">淘宝</a>
+            <a href="http://www.jdmama.com" target="_blank">京东妈妈</a>
+
+        </div>
+ 
+        <hr>
+
+        <div>
+            <h3>class的叠加去select</h3>
+            <p class="p1 pMore">看我看我</p>       <!--color = red-->
+            <p class="p1">爱我爱我</p>             <!--color = cyan & font-size = 30px-->
+        </div>
+
+        <hr>
+
+        <div>
+            <h3>属性的叠加去select</h3>
+            <p class="p1" height="100px">我是一个自然段</p>
+        </div>
+
+        <hr>
+
+        <div>
+            <h3>用 标签：event 去select</h3>
+            <a href="http://www.merriam-webster.com">360</a>
+
+            <ul class="one">
+                <li>首页</li>
+                <li>第一部分</li>
+                <li>第二部分</li>
+                <li>第三部分</li>
+            </ul>
+
+            <div>第一个division</div>
+            <div>第二个division</div>
+            <div>第三个division</div>
+            <div>第四个division</div>
+            <div id="five">第五个division</div>
+        </div>
+
+        <div>
+            <h3>nth child 去选择</h3>
+            <!--第一个li显示为red-->
+            <ul class="shit">
+                <li>第一个</li>
+                <li>第二个</li>
+                <li>第三个</li>
+                <li>第四个</li>
+                <li>第五个</li>
+            </ul>
+
+            <ul class="shit">
+                <!--无li显示为red-->
+                <span></span>
+                <li>第一个</li>
+                <li>第二个</li>
+                <li>第三个</li>
+                <li>第四个</li>
+                <li>第五个</li>
+            </ul>
+
+            <ul>
+                <li>唯一的list</li>
+            </ul>
+        </div>
+        
+    </body>
+</html>

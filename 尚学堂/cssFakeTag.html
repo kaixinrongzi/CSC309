@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head lang="eng">
+        <meta charset="utf-8"> 
+        <title>伪tag</title>
+        <style>
+            ul.one::before{content:"林依晨"; color:antiquewhite}
+            ul.one::after{content:"李念"; color:fuchsia}
+
+            fieldset[class~="input-styling"] input:checked+span{ background-color: coral; }     /*background-color: 是背景颜色
+                                                                  input:checked表示当input被checked的时候；+span表示input的兄弟<span>*/
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <h3></h3>
+            <ul class="one">
+                <li>第一部分</li>
+                <li>第二部分</li>
+                <li>第三部分</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3 align="center">单选</h3>
+            <fieldset class="one input-styling">
+                <legend>请选择一个你喜欢的明星：</legend>
+                <ul class="two" style="list-style: none">
+                    <li>
+                        <label>
+                            <input type="radio" name="star"><span>范冰冰</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="star"><span>李冰冰</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="radio" name="star"><span>莱昂纳多</span>
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+
+            <h3 align="center">多选</h3>
+            <fieldset class="two input-styling">
+                <legend>请选择一个你喜欢的电影：</legend>
+                <ul class="three" style="list-style: none">
+                    <li>
+                        <label>
+                            <input type="checkbox" name="movie"><span>魔兽</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="movie"><span>X战警</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <input type="checkbox" name="movie"><span>指环王</span>
+                        </label>
+                    </li>
+                </ul>
+            </fieldset>
+        </div>
+    </body>
+
+</html>

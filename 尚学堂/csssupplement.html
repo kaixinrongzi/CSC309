@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head lang="eng">
+        <meta charset="utf-8"> 
+        <title>introduction to table</title>
+        <style>
+            p.two{
+                white-space: nowrap; 
+                /* overflow:hidden;
+                text-overflow:ellipsis */
+            }
+            p.three{
+                white-space: nowrap; 
+                overflow:hidden;
+                text-overflow:ellipsis
+            }
+            p.four{
+                text-decoration: underline;    /* 下划线 */
+                cursor:pointer                 /* 显示手 */
+            }
+            span.one{
+                text-decoration: line-through;    /* 下划线 */
+                color:chocolate;
+                display: inline
+            }
+            a.one{text-decoration: none}      /* a标签不显示下划线了（一般a的decoratoin是下划线） */
+            ul.one{list-style: none;
+                   display: flex;
+                   flex-direction: column;
+                   justify-content:center}
+            
+            /* ul.one li{background-image: url(https://img0.baidu.com/it/u=3060871388,4178310094&fm=253&fmt=auto&app=138&f=JPEG?w=889&h=500);
+                      background-size: 80px;
+                      background-repeat: no-repeat;
+                      height: 100px; 
+                      text-indent:80px;
+                      display: flex
+            } */
+            ul.one li{display: flex;
+                      flex-direction: row;
+                      /* justify-content:; */
+                      align-content: left
+                    }
+            ul.one li span.one{
+                /* background-color: antiquewhite; */
+                width: 200px;
+                height: 100px;
+                border: 1px solid red;
+                background-image: url(https://img1.baidu.com/it/u=2131143233,2928704221&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1674320400&t=6611ab26046d3a6216fa51903183be57);
+                background-size: 200px 100px;
+                background-position: 30px 30px;
+                background-repeat: no-repeat;
+                /* background-size: 100px 200px; */
+            }
+            ul.one li table{/*text-align: center;*/
+                            /* width: 80px;
+                            height: 80px; */
+                            border: 1px solid blueviolet;
+                            letter-spacing: 6px;
+                            /* border: 1px solid red; */
+                               /* display: inline  */
+                            }
+            
+            div table.one{    /*table的每一个单元格的大小都是flexbible to its content*/
+                border: 1px solid red;
+                border-collapse: collapse;    /*border会合并*/
+            }
+            div table.one td{
+                border: 1px solid red;
+                text-indent: 5px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <h3>以下3段为p 显示格式 对比（请缩窄浏览器）</h3>
+            <p>一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字</p> <!--这句话会wrap-->
+            <p class="two">一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字</p> <!--这句话不会wrap，显示不下的内容会直接不显示-->
+            <p class="three">一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字一段文字</p> <!--这句话不会wrap，显示不下的内容会显示成...-->
+        </div>
+
+        <hr>
+
+        <div>
+            <h3>text-decoration声明</h3>
+            <p class="four">前室友是傻逼荡妇淫荡丑逼臭逼</p>
+            <span class="one">前室友是正常人</span> <span>vs. </span> <del>前室友是正常人</del>
+        </div>
+
+        <hr>
+
+        <div>
+            <h3>a标签也是可以被text-decoration的</h3>
+            <a class="one" href="#">超级链接</a>
+        </div>
+
+        <hr>
+
+        <div>
+            <h3></h3>
+            <ul class="one">
+                <li>
+                    <span class="one"></span>
+                    <table>
+                        <tr>
+                            <td>one</td>
+                        </tr>
+                    </table> 
+                </li>
+                <li>
+                    <span class="one"></span>
+                    <table>
+                        <tr>
+                            <td>two</td>
+                        </tr>
+                    </table> 
+                </li>
+                <li>
+                    <span class="one"></span>
+                    <table>
+                        <tr>
+                            <td>three</td>
+                        </tr>
+                    </table> 
+                </li>
+            </ul>
+        </div>
+
+        <hr>
+        <div>
+            <h3>table</h3>
+            <table class="one">
+                <tr>
+                    <td>单元格单元格</td>
+                    <td>单元格</td>
+                    <td>单元格</td>
+                </tr>
+                <tr>
+                    <td>单元格</td>
+                    <td>单元格</td>
+                    <td>单元格</td>
+                </tr>
+                <tr>
+                    <td>单元格</td>
+                    <td>单元格</td>
+                    <td>单元格</td>
+                </tr>
+            </table>
+        </div>
+            
+        
+        
+    </body>
+</html>
